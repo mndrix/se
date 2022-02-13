@@ -28,17 +28,6 @@ AS_IF([test "x$CURSES_LOC" = "x"], [AC_MSG_ERROR([curses headers not found])])
 AC_SUBST(CURSES_LOC)
 
 dnl
-dnl check for crypt(1) program
-dnl
-
-AC_CHECK_PROG(CRYPT_PROG, crypt, yes)
-if test x"${CRYPT_PROG}" != x"" ; then
-	AC_DEFINE([HAVE_CRYPT_PROG], [1], [crypt(1) is available])
-fi
-AC_CHECK_HEADERS([unistd.h])
-AC_CHECK_LIB(bsd, getpass)
-
-dnl
 dnl check for system dependent header files and functions
 dnl
 

@@ -57,10 +57,6 @@ typedef	struct ldesc {		/* line	descriptor */
 #define GARB_THRESHOLD	1000
 #define BUFENT		1
 
-#ifdef HAVE_CRYPT_PROG
-#define KEYSIZE		11
-#endif /* HAVE_CRYPT_PROG */
-
 /* Message classes for status line at bottom of	screen */
 #define SE_NOMSG		0
 #define REMARK_MSG	1
@@ -74,7 +70,6 @@ typedef	struct ldesc {		/* line	descriptor */
 #define COMPRESS_MSG	9
 #define HELP_MSG	10
 #define MODE_MSG	11
-#define CRYPT_MSG	12
 
 /* Characters typed by the user	*/
 #define ANYWAY		'!'

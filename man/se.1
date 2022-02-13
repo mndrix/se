@@ -750,30 +750,6 @@ command checks the source option for files;
 use the \*(lqex\*(rq command to force
 tab expansion.
 .TP
-.RI y\^[ key ]
-allows you to edit encrypted files. \*(lqoy\*(rq followed by a key
-will cause the
-\*(lqe\*(rq, \*(lqr\*(rq, and \*(lqw\*(rq
-commands to encrypt and decrypt files using
-.IR crypt (1).
-\*(lqoy\*(rq by itself will toggle the current encryption setting.
-If there is no current key,
-.I se
-will ask you for one.
-Echoing is turned off while you type your key in, and
-.I se
-asks you to type it in twice, just to be sure.
-If encryption is turned on, and you type a plain \*(lqoy\*(rq,
-it will be turned off.
-Note that doing so causes
-.I se
-to forget the value of the encryption key.
-Encryption in indicated by the message
-\*(lqENCRYPT\*(rq in the status line.
-The key is
-.I never
-shown on your screen.
-.TP
 z
 suspends the editor (puts it in the background)
 and returns to the user's shell.
@@ -1261,13 +1237,6 @@ dumps its buffer if it catches a hang-up signal.
 help scripts for the \*(lqh\*(rq command.
 .SH DIAGNOSTICS
 Self explanatory diagnostics appear in the status line.
-.SH CAVEATS
-.I Se
-will
-.I never
-dump its buffer into an encrypted file when it
-encounters a hang-up,
-even if encryption was turned on at the time.
 .SH SEE ALSO
 .I
 Software Tools,
@@ -1276,7 +1245,6 @@ Software Tools in Pascal,
 .I
 Software Tools Subsystem User's Guide,
 .IR ed (1),
-.IR crypt (1),
 .IR ksh (1),
 .IR scriptse (1),
 .IR sh (1),

@@ -102,11 +102,4 @@ extern char *Tobp;		/* pointer to last used part of Tobuf */
 extern int Int_caught;		/* caught a SIGINT from user */
 extern int Hup_caught;		/* caught a SIGHUP when phone line dropped */
 
-
-#ifdef HAVE_CRYPT_PROG
-/* Concerning file encryption: */
-extern int Crypting;		/* doing file encryption? */
-extern char Key[KEYSIZE];	/* encryption key */
-#endif /* HAVE_CRYPT_PROG */
-
 #endif
