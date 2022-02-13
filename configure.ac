@@ -67,11 +67,9 @@ AC_CHECK_LIB(Ws2_32, gethostname)
 AC_CHECK_FUNCS([gethostname])
 
 dnl
-dnl Enable some extra warnings when using gcc.
+dnl Enable some extra warnings 
 dnl
-if test "x$GCC" = "xyes" ; then
-	CFLAGS="$CFLAGS -Wall -pedantic"
-fi
+CFLAGS="$CFLAGS -Wall -pedantic"
 
 dnl
 dnl check for diff(1)
