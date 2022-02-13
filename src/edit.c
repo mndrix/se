@@ -22,10 +22,6 @@
 #include <Winsock2.h>
 #endif /* HAVE_WINSOCK2_H */
 
-#ifdef LOG_USAGE
-#include <syslog.h>
-#endif /* LOG_USAGE */
-
 #include "se.h"
 #include "docmd1.h"
 #include "docmd2.h"
@@ -48,10 +44,6 @@ void edit (int argc, char *argv[])
 	char lin[MAXLINE], term;
 
 	watch ();       /* display time of day */
-
-#ifdef LOG_USAGE
-	log_usage ();		/* log who used the program */
-#endif
 
 	serc ();	/* execute commands in ./.serc or $HOME/.serc */
 
@@ -1376,33 +1368,6 @@ void serc (void)
 	}
 	fclose (fp);
 }
-
-#ifdef LOG_USAGE
-
-/* log -- log se usage */
-
-
-void log_usage (void)
-{
-	char logname[MAXLINE], tod[26];		/* tod => time of day */
-	long clock;
-
-	/* get the login name */
-	memset (logname, SE_EOS, MAXLINE);
-	strncpy (logname, getlogin (), MAXLINE-1);
-
-	time (&clock);
-
-	memset (tod, SE_EOS, 26);
-	strncpy (tod, ctime (&clock), 26-1);	/* see the manual on ctime(3C)  */
-	tod[24] = SE_EOS;				/* delete the '\n' at the end */
-
-	openlog (PACKAGE, 0, LOG_USER);
-	syslog (LOG_INFO, "%s was invoked by %s on %s.", PACKAGE, logname, tod);
-	closelog ();
-
-}
-#endif
 
 /* sysname --- return a string telling us who we are */
 

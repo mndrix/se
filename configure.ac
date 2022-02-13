@@ -18,19 +18,6 @@ AC_SEARCH_LIBS([strerror],[cposix])
 AC_PROG_CC
 
 dnl
-dnl Give the user the option of enabling usage logging.
-dnl
-
-AC_ARG_ENABLE([usage-logging],
-	AS_HELP_STRING([--enable-usage-logging],[log every time se is invoked])],
-	[enable_usage_logging="$enableval"],
-	[enable_usage_logging="no"])
-
-if test "x$enable_usage_logging" = "xyes" ; then
-	AC_DEFINE([LOG_USAGE], [1], [log every time se is invoked])
-fi
-
-dnl
 dnl curses library and header detection.
 dnl
 
