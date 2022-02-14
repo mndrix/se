@@ -23,7 +23,7 @@
 ** In fact, I would go as far as saying, "If you touch this, it will break.
 ** It is held together with chewing gum, scotch tape, and bobby pins."
 **
-** This file is in the public domain.
+** This file is licensed under 0BSD.
 */
 
 #include "config.h"

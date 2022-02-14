@@ -8,7 +8,7 @@
 ** have ported the BSD termlib library.  If it is Release 2, then the new
 ** terminfo package is there, and we wil use it.
 **
-** This file is in the public domain.
+** This file is licensed under 0BSD.
 */
 
 #include "config.h"

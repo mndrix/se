@@ -1,4 +1,4 @@
-# This file is in the public domain.
+# This file is licensed under 0BSD.
 
 AM_CPPFLAGS = -DHELP_DIR='"$(datadir)/@PACKAGE@/help"' \
 	-DSHELL='"$(SHELL)"' -DCURSES_LOC='@CURSES_LOC@'

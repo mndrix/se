@@ -3,7 +3,7 @@
 **
 ** lots of miscellanious routines for the screen editor.
 **
-** This file is in the public domain.
+** This file is licensed under 0BSD.
 */
 
 #include "config.h"

@@ -1,4 +1,4 @@
-# This file is in the public domain.
+# This file is licensed under 0BSD.
 
 SUBDIRS = help src man tests
 

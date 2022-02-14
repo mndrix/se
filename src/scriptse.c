@@ -7,7 +7,7 @@
 ** This is very quick-and-dirty, not checking
 ** for any of se's control characters.
 **
-** This file is in the public domain.
+** This file is licensed under 0BSD.
 */
 
 #include "config.h"

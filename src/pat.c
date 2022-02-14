@@ -7,7 +7,7 @@
 ** of the editor, therefore make them static in the name
 ** of modularity.
 **
-** This file is in the public domain.
+** This file is licensed under 0BSD.
 */
 
 #include "config.h"

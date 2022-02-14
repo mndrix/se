@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# This file is in the public domain.
+# This file is licensed under 0BSD.
 #
 
 ${TEST_RUNNER} hello_world

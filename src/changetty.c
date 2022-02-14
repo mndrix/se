@@ -15,7 +15,7 @@
 ** need ospeed.  If not release 2, we assume Release 1 that someone
 ** have moved the BSD termlib to.
 **
-** This file is in the public domain.
+** This file is licensed under 0BSD.
 */
 
 #include "config.h"

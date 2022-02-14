@@ -1,5 +1,5 @@
 dnl
-dnl This file is in the public domain.
+dnl This file is licensed under 0BSD.
 dnl
 
 dnl
